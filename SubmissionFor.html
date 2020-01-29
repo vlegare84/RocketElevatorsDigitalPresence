@@ -574,10 +574,9 @@
 <br><br>
  
 
- <!-- document.getElementById("menu").innerHTML = x.options[i].text;  (mettre après: var i = x.selectedIndex;
-   de la fonction ci-dessous: function MaFonctionDeSelection() {    -->
+
 <script>
-function MaFonctionDeSelection() {
+function SelectFunction() {
     var x = document.getElementById("mySelect");
     var i = x.selectedIndex;
   
@@ -724,7 +723,7 @@ paramêtres respectifs du calcul du résultat le Nombre Ascenceurs -->
 
 	function FormulesSelected()  {
 	
-   var service =  MaFonctionDeSelection();  
+   var service =  SelectFunction();  
    
    
    if ( service == 1 )
@@ -801,7 +800,7 @@ paramêtres respectifs du calcul du résultat le Nombre Ascenceurs -->
 <!--Formule  Corporate et Hybride Nombre Ascenseurs -->
 <script>
 	function ResultNumberCorporateElevators() {
-	   service = MaFonctionDeSelection();
+	   service = SelectFunction();
 
 		var Fc =  document.getElementById("NbreFloor").value  || 0 ;
 		var F = Number(document.getElementById("NbreFloor").value || 0  );
@@ -846,7 +845,7 @@ paramêtres respectifs du calcul du résultat le Nombre Ascenceurs -->
 
 <script>
 	function Price()  {
-		 var service = MaFonctionDeSelection();
+		 var service = SelectFunction();
 		 
 		 
 		 if (service == 1)  {
@@ -1056,7 +1055,7 @@ valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: no
  {
     
     
-    if (MaFonctionDeSelection()  === 0)  {
+    if (SelectFunction()  === 0)  {
          
          
         
@@ -1071,7 +1070,7 @@ valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: no
          RemoveElementDiv9(); 
 		 RemoveElementDiv10(); 								}  
     
-    if	(MaFonctionDeSelection() === 1)	{
+    if	(SelectFunction() === 1)	{
         
     				
         AddElementDiv1();
@@ -1085,7 +1084,7 @@ valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: no
         RemoveElementDiv8();
         RemoveElementDiv9();            					} 
                                         
-    if	(MaFonctionDeSelection() === 2)	{
+    if	(SelectFunction() === 2)	{
          
     	
         								AddElementDiv4();
@@ -1099,7 +1098,7 @@ valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: no
          								RemoveElementDiv8();
          								RemoveElementDiv9();}  
                                 
-    if	(MaFonctionDeSelection() === 3)	{
+    if	(SelectFunction() === 3)	{
         
     							
                                 		AddElementDiv7();
@@ -1113,7 +1112,7 @@ valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: no
          								RemoveElementDiv6();
          								RemoveElementDiv9();
                                					}  
-    if	( MaFonctionDeSelection() === 4)	{
+    if	(SelectFunction() === 4)	{
         
     									
                                         AddElementDiv4();
