@@ -7,24 +7,28 @@
 					height: 60px;
 					background-color:white;
 					display: none;
+					text-align: center;
 				}
 				#myDIV_2 {
 					width: 500px;
 					height: 60px;
 					background-color: white;
 					display: none;
+					text-align: center;
 				}
 				#myDIV_3 {
 					width: 500px;
 					height: 60px;
 					background-color: white;
 					display: none;
+					text-align: center;
 				}
 				#myDIV_4 {
 					width: 500px;
 					height: 60px;
 					background-color: white;
 					display: none;
+					text-align: center;
 				}
 				#myDIV_5 {
 					width: 500px;
@@ -32,36 +36,42 @@
 					background-color: white;
 					display: none;
 					justify-content: center;
+					text-align: center;
 				}
 				#myDIV_6 {
 					width: 500px;
 					height: 60px;
 					background-color: white;
 					display: none;
+					text-align: center;
 				}
 				#myDIV_7 {
 					width: 500px;
 					height: 60px;
 					background-color: white;
 					display: none;
+					text-align: center;
 				}
 				#myDIV_8 {
 					width: 500px;
 					height: 60px;
 					background-color: white;
 					display: none;
+					text-align: center;
 				}
 				#myDIV_9 {
 					width: 500px;
 					height: 60px;
 					background-color: white;
 					display: none;
+					text-align: center;
 				}
 				#myDIV_10 {
 					width: 500px;
 					height: 60px;
 					background-color: white;
 					display: none;
+					text-align: center;
 				}
 				
 				</style>
@@ -551,10 +561,10 @@
 <!--
 <p  id="menu"> 
 <br>  -->
-<p> <strong>First, select the type of service in the list below</strong> <p> 
+<p> <strong>Select the type of service</strong> <p> 
  
 
-<select id="mySelect" onchange="TriEnlever()">
+<select id="mySelect" onchange="Choice()">
     <option> </option>
     <option>Residential</option>
     <option>Commercial</option>
@@ -568,9 +578,7 @@
 
   
 
-<!--
-<button onclick="TriEnlever()">Affiche l'option choisie du menu     </button>
--->
+
 <br><br>
  
 
@@ -583,9 +591,7 @@ function SelectFunction() {
     return i;
 }
 </script>
-<!--
-<button type="button" onclick="TriEnlever()">Choisi le div </button> 
- -->
+
  
  
  
@@ -593,54 +599,54 @@ function SelectFunction() {
 <div id="myDIV_1">
 Enter the number of the appartements<br>
 
- <input id="NberAppartement"    type="number" name="" value="" oninput="Call()" onkeyup="Call()"  >   
+ <input id="Appartement"    type="number" name="" value="" oninput="Call()" onkeyup="Call()"  >   
 </div>
 
 <div id="myDIV_2">
 Enter the number of the floors<br>
 
- <input id="NbreFloor"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()"> 
+ <input id="Floor"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()"> 
 </div>
 
 <div id="myDIV_3">
 Enter the number of the basements<br>
 
- <input id="NbreBasements"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()">  
+ <input id="Basements"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()">  
 </div> 
 
 <div id="myDIV_4">
 Enter the number of the separate businesses<br>
 
- <input id="NbreSeparateBusiness"    type="number" name="" value="" oninput="Call()"  onkeyup="Call()" >    
+ <input id="Business"    type="number" name="" value="" oninput="Call()"  onkeyup="Call()" >    
 </div>
 
 <div id="myDIV_5">
 Enter the number of parking available<br>
 
- <input id="NbreParking"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" > 
+ <input id="Parking"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" > 
 </div>
 
 <div id="myDIV_6">
 Enter the number of lift cages to deploy<br>
 
- <input id="NberCage"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()">   
+ <input id="Cages"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()">   
 </div>
 
 <div id="myDIV_7">
 Enter the number of separate rental companies<br>
- <input id="NbreRentalCompagnies"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" >   
+ <input id="Companies"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" >   
 </div>
 
 <div id="myDIV_8">
 Enter the number of occupants per floor<br>
 
- <input id="NbreMaxPersonByfloor"    type="number" name=""  value="" input="Call()"  onkeyup="Call()">   
+ <input id="PeopleFloor"    type="number" name=""  value="" input="Call()"  onkeyup="Call()">   
 </div>
 
 <div id="myDIV_9">
 Enter the number of hours of activity of the building<br>
 
- <input id="NbreHoursActivity"    type="number" name=""  value=""  input="Call()"  onkeyup="Call()">   
+ <input id="OpenHours"    type="number" name=""  value=""  input="Call()"  onkeyup="Call()">   
 </div>
 
 <div id="myDIV_10">
@@ -758,9 +764,9 @@ paramêtres respectifs du calcul du résultat le Nombre Ascenceurs -->
 	   
 		
 	
-		var x = document.getElementById("NberAppartement").value || 0 ;
-		var y = document.getElementById("NbreFloor").value || 0 ;
-		var z = document.getElementById("NbreBasements").value || 0;
+		var x = document.getElementById("Appartement").value || 0 ;
+		var y = document.getElementById("Floor").value || 0 ;
+		var z = document.getElementById("Basements").value || 0;
 		var Nber = Math.ceil( x /(y*6) ); 
 			  
 			   
@@ -781,12 +787,12 @@ paramêtres respectifs du calcul du résultat le Nombre Ascenceurs -->
 <!--Formule  Commercial Nombre Ascenseurs -->
 <script>
 	function ResultNumberCommercialElevators() {
-		       var c5 =   document.getElementById ("NbreParking").value || 0 ;
-			   var  b =   document.getElementById ("NbreBasements").value || 0 ;
-			   var  f =   document.getElementById (	"NbreFloor").value 	|| 0 ;
-			   var  c4 =   document.getElementById ("NbreSeparateBusiness").value ||  0 ;
+		       var c5 =   document.getElementById ("Parking").value || 0 ;
+			   var  b =   document.getElementById ("Basements").value || 0 ;
+			   var  f =   document.getElementById (	"Floor").value 	|| 0 ;
+			   var  c4 =   document.getElementById ("Business").value ||  0 ;
 
-			    var x = document.getElementById("NberCage").value || 0;
+			    var x = document.getElementById("Cages").value || 0;
 			
 			if (c5 != 0  && b != 0   && f  != 0  &&  c4 != 0      )
 			 {document.getElementById("ResultatAscenseur").value = x;}
@@ -802,17 +808,17 @@ paramêtres respectifs du calcul du résultat le Nombre Ascenceurs -->
 	function ResultNumberCorporateElevators() {
 	   service = SelectFunction();
 
-		var Fc =  document.getElementById("NbreFloor").value  || 0 ;
-		var F = Number(document.getElementById("NbreFloor").value || 0  );
+		var Fc =  document.getElementById("Floor").value  || 0 ;
+		var F = Number(document.getElementById("Floor").value || 0  );
 		
-		var Bc =   document.getElementById("NbreBasements").value;
-		var B = Number(document.getElementById("NbreBasements").value || 0 );
+		var Bc =   document.getElementById("Basements").value;
+		var B = Number(document.getElementById("Basements").value || 0 );
 
-		var M = document.getElementById("NbreMaxPersonByfloor").value || 0 ;
-		var SB = document.getElementById("NbreSeparateBusiness").value || 0 ;
-		var P = document.getElementById("NbreParking").value || 0 ;
-		var H = document.getElementById("NbreHoursActivity").value || 0 ;
-		var R = document.getElementById("NbreRentalCompagnies").value || 0 ;
+		var M = document.getElementById("PeopleFloor").value || 0 ;
+		var SB = document.getElementById("Business").value || 0 ;
+		var P = document.getElementById("Parking").value || 0 ;
+		var H = document.getElementById("OpenHours").value || 0 ;
+		var R = document.getElementById("Companies").value || 0 ;
 	   
 	   
 		var Nber = Math.ceil( M*(F+B)/1000 ); 
@@ -1051,7 +1057,7 @@ champs de leurs paramètres vont apparaîtres avec l'appel des fonctions
 valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: none; -->
 
 <script>
-	function TriEnlever( )
+	function Choice( )
  {
     
     
@@ -1127,15 +1133,15 @@ valeur est définit à ne pas afficher, soit définit par #myDIV_1 { display: no
          								RemoveElementDiv7();
                                         		}
          								                             
-		document.getElementById("NberAppartement" ).value = ""; 
-		document.getElementById("NbreFloor" ).value = "";
-		document.getElementById("NbreBasements" ).value = ""; 
-		document.getElementById("NbreSeparateBusiness" ).value = "";
-		document.getElementById("NbreParking" ).value = ""; 
-		document.getElementById( "NberCage").value = "";
-		document.getElementById("NbreRentalCompagnies" ).value = ""; 
-		document.getElementById("NbreMaxPersonByfloor"  ).value = "";
-		document.getElementById( "NbreHoursActivity").value = ""; 
+		document.getElementById("Appartement" ).value = ""; 
+		document.getElementById("Floor" ).value = "";
+		document.getElementById("Basements" ).value = ""; 
+		document.getElementById("Business" ).value = "";
+		document.getElementById("Parking" ).value = ""; 
+		document.getElementById( "Cages").value = "";
+		document.getElementById("Companies" ).value = ""; 
+		document.getElementById("PeopleFloor"  ).value = "";
+		document.getElementById( "OpenHours").value = ""; 
 		document.getElementById("ResultatAscenseur" ).value = "";
 
 
