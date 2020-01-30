@@ -1607,8 +1607,8 @@
 												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
 											</div>
 											<div class="col-md-4">
-												<label for="contact:phone">Phone</label>
-												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+												<label for="contact:phone">Phone ("XXX-XXX-XXXX")</label>
+										<input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  value="" class="form-control" name="contact[phone]" id="contact:phone">
 											</div>
 									</div>
 									<div class="row">
@@ -1617,21 +1617,19 @@
 												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
 											</div>
 											<div class="col-md-4">
-												<label for="contact_department">Department</label>
-												<select class="form-control pointer" name="contact[department]">
+												<label for="contact_department">Department *</label>
+												<select required class="form-control pointer" name="contact[department]">
 													<option value="">--- Select ---</option>
 													<option value="Marketing">Residential</option>
 													<option value="Webdesign">Commercial</option>
-													<!--
-													<option value="Architecture">Architecture</option>
-												    -->
+
 												</select>
 											</div>
 									</div>
 									<div class="row">
 											<div class="col-md-12">
-												<label for="contact:message">Message *</label>
-												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+												<label for="contact:message">Message (Max. 1000car) *</label>
+												<textarea required maxlength="1000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
 											</div>
 									</div>
 									<div class="row">
@@ -1719,12 +1717,12 @@
 						</div>
 						<!-- /col #1 -->
 
-						<!--
-						<!- col #2 ->
+						
+						
 						<div class="col-md-4">
 							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
 
-							<!- Newsletter Form ->
+							<!-- Newsletter Form -->
 							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
 
 							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
@@ -1736,12 +1734,12 @@
 									</span>
 								</div>
 							</form>
-							<!- /Newsletter Form ->
+							<!-- /Newsletter Form -->
 
 
 						</div>
-						<!- /col #2 ->
-					    -->
+						
+					    
 
 					</div>
 
