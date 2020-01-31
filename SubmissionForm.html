@@ -61,7 +61,9 @@
 				#ChoiceModel {
 					position: auto;
 					text-align: center;
+					display: none;
 				}
+				
 				
 				</style>
 				
@@ -182,9 +184,16 @@
 										</a>
 									</li>
 									<li><!-- SERVICES -->
-										<a href="Index.html#services">
-											SERVICES
-										</a>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#services">
+												Service
+											</a>
+											<ul class="dropdown-menu">
+												<li><a href="Residential.html">Residential Services</a></li>
+												<li><a href="Corporate.html">Corporate Services</a></li>
+											</ul>
+										</li>
+
 									</li>
 									<li><!-- WORK -->
 										<a href="Index.html#work">
@@ -364,12 +373,12 @@ The number of elevators you need:<br>
    
    if ( service == 3 )
    {
-	  ResultNumberCorporateElevators(); 
+	  ResultCorporateElevators(); 
    }
    
    if ( service == 4 )
    {
-	  ResultNumberCorporateElevators(); 
+	  ResultCorporateElevators(); 
    }
    
    
@@ -424,7 +433,7 @@ The number of elevators you need:<br>
 
 
 <script>
-	function ResultNumberCorporateElevators() {
+	function ResultCorporateElevators() {
 	   service = SelectFunction();
 
 		var Floor =  document.getElementById("Floor").value  || 0 ;
@@ -480,7 +489,7 @@ The number of elevators you need:<br>
 											}									
 
 		 if (service == 3 || service == 4 )  {
-		 var NumberCorporateElevators = ResultNumberCorporateElevators();
+		 var NumberCorporateElevators = ResultCorporateElevators();
 											 }
 		 
 											
@@ -601,6 +610,11 @@ function AddElementDiv9() {
 		document.getElementById("DivElev").style.display = "block";
 	}
 </script>
+<script>
+	function AddElementDiv11(){
+		document.getElementById("ChoiceModel").style.display = "block";
+	}
+</script>
 
 
 
@@ -664,6 +678,11 @@ function RemoveElementDiv10() {
     document.getElementById("DivElev").style.display = "none";
 }
 </script>
+<script>
+function RemoveElementDiv11() {
+	document.getElementById("ChoiceModel").style.display = "none";
+}
+</script>
 
 
 
@@ -687,7 +706,9 @@ function RemoveElementDiv10() {
          RemoveElementDiv7();
          RemoveElementDiv8();
          RemoveElementDiv9(); 
-		 RemoveElementDiv10(); 								}  
+		 RemoveElementDiv10(); 	
+		 RemoveElementDiv11();						
+		 }  
     
     if	(SelectFunction() === 1)	{
         
@@ -695,56 +716,63 @@ function RemoveElementDiv10() {
         AddElementDiv1();
         AddElementDiv2();
         AddElementDiv3();
-		AddElementDiv10()
+		AddElementDiv10();
+		AddElementDiv11();
         RemoveElementDiv4();
         RemoveElementDiv5();
         RemoveElementDiv6();
         RemoveElementDiv7();
         RemoveElementDiv8();
-        RemoveElementDiv9();            					} 
+        RemoveElementDiv9();            					
+		} 
                                         
     if	(SelectFunction() === 2)	{
          
     	
-        								AddElementDiv4();
-                                        AddElementDiv2();
-                                        AddElementDiv3();
-                                        AddElementDiv5();
-                                        AddElementDiv6();
-										AddElementDiv10();
-                    					RemoveElementDiv1();
-                                        RemoveElementDiv7();
-         								RemoveElementDiv8();
-         								RemoveElementDiv9();}  
+        AddElementDiv4();
+        AddElementDiv2();
+        AddElementDiv3();
+        AddElementDiv5();
+        AddElementDiv6();
+		AddElementDiv10();
+		AddElementDiv11();
+    	RemoveElementDiv1();
+    	RemoveElementDiv7();
+        RemoveElementDiv8();
+        RemoveElementDiv9();
+		}  
                                 
-    if	(SelectFunction() === 3)	{
+    if	(SelectFunction() === 3){
         
     							
-                                		AddElementDiv7();
-                                        AddElementDiv2();
-                                        AddElementDiv3();
-                                        AddElementDiv5();
-                                        AddElementDiv8();
-										AddElementDiv10();
-                                		RemoveElementDiv1();
-                                        RemoveElementDiv4();
-         								RemoveElementDiv6();
-         								RemoveElementDiv9();
-                               					}  
-    if	(SelectFunction() === 4)	{
+        AddElementDiv7();
+        AddElementDiv2();
+        AddElementDiv3();
+        AddElementDiv5();
+        AddElementDiv8();
+		AddElementDiv10();
+		AddElementDiv11();
+        RemoveElementDiv1();
+        RemoveElementDiv4();
+        RemoveElementDiv6();
+        RemoveElementDiv9();
+        }
+
+    if	(SelectFunction() === 4){
         
     									
-                                        AddElementDiv4();
-                                        AddElementDiv2();
-                                        AddElementDiv3();
-                                        AddElementDiv5();
-                                        AddElementDiv8();
-                                        AddElementDiv9();
-										AddElementDiv10();
-                                		RemoveElementDiv1();
-                                        RemoveElementDiv6();
-         								RemoveElementDiv7();
-                                        		}
+        AddElementDiv4();
+        AddElementDiv2();
+        AddElementDiv3();
+        AddElementDiv5();
+        AddElementDiv8();
+        AddElementDiv9();
+		AddElementDiv10();
+		AddElementDiv11();
+        RemoveElementDiv1();
+        RemoveElementDiv6();
+        RemoveElementDiv7();
+        }
          								                             
 		document.getElementById("Appartement" ).value = ""; 
 		document.getElementById("Floor" ).value = "";
