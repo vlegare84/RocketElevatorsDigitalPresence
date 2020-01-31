@@ -324,13 +324,13 @@ The number of elevators you need:<br>
   <input id =PriceUnitExcelium type="radio" name="services" value="other" onchange="Price()"> Excelium<br><br>
 
   <br>Price of an elevator : <input id="PriceUnit" type ="text"  disabled>
-  <br>Installation cost : <input id="InstallationCost" type ="text"  disabled>
-  <br>Total cost $: <input id="TotalCost" type ="text"  disabled>
+  <br>Installation fees : <input id="InstallationCost" type ="text"  disabled>
+  <br>Total : <input id="TotalCost" type ="text"  disabled>
 
 
  <br>   
 </div>
- <p id="demo2"></p>
+ 
 
  
  
@@ -353,12 +353,12 @@ The number of elevators you need:<br>
    
    if ( service == 1 )
    {
-	  ResultNumberResidentialElevators(); 
+	  ResultResidentialElevators(); 
    }
    
    if ( service == 2 )
    {
-	  ResultNumberCommercialElevators(); 
+	  ResultCommercialElevators(); 
 	  
    }
    
@@ -379,7 +379,7 @@ The number of elevators you need:<br>
 
 
 <script>
-	function ResultNumberResidentialElevators() {
+	function ResultResidentialElevators() {
 	   
 		
 	
@@ -405,7 +405,7 @@ The number of elevators you need:<br>
 
 
 <script>
-	function ResultNumberCommercialElevators() {
+	function ResultCommercialElevators() {
 		       var Parking =   document.getElementById ("Parking").value || 0 ;
 			   var  Basement =   document.getElementById ("Basements").value || 0 ;
 			   var  Floor =   document.getElementById (	"Floor").value 	|| 0 ;
@@ -473,10 +473,10 @@ The number of elevators you need:<br>
 		 
 		 
 		 if (service == 1)  {
-		 var NumberCorporateElevators = ResultNumberResidentialElevators();
+		 var NumberCorporateElevators = ResultResidentialElevators();
 											}
 		 if (service == 2)  {
-		 var NumberCorporateElevators = ResultNumberCommercialElevators();
+		 var NumberCorporateElevators = ResultCommercialElevators();
 											}									
 
 		 if (service == 3 || service == 4 )  {
