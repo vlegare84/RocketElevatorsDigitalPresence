@@ -1604,11 +1604,11 @@
 											</div>
 											<div class="col-md-4">
 												<label for="contact:email">E-mail Address *</label>
-												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email" placeholder="email@domain.com">
 											</div>
 											<div class="col-md-4">
-												<label for="contact:phone">Phone ("XXX-XXX-XXXX")</label>
-										<input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  value="" class="form-control" name="contact[phone]" id="contact:phone">
+												<label for="contact:phone">Phone *</label>
+										<input type="text" pattern="[0-9]{10}"  value="" class="form-control" name="contact[phone]" id="contact:phone" placeholder="10 digits"> 
 											</div>
 									</div>
 									<div class="row">
@@ -1628,7 +1628,7 @@
 									</div>
 									<div class="row">
 											<div class="col-md-12">
-												<label for="contact:message">Message (Max. 1000car) *</label>
+												<label for="contact:message">Message (Max. 1000char) *</label>
 												<textarea required maxlength="1000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
 											</div>
 									</div>

@@ -2,13 +2,10 @@
 <html lang="en">
 		<style> 
 			
-				#Text{
+				.customSelect {
 					padding-left: 150px;
-					text-align: center;
-
-				}
-				.select{
-					display: inline-block;
+					width: 500px;
+					height: 60px;
 					text-align: center;
 				}
 				#DivApp {
@@ -533,7 +530,8 @@
 <!--
 <p  id="menu"> 
 <br>  -->
-<p id="Text">  <strong>Select the type of service</strong> <p> 
+<div class="customSelect">
+<p id="Text">  <strong>Select the type of service</strong> </p> 
  
 
 <select id="mySelect" onchange="Choice()">
@@ -552,7 +550,7 @@
 
 
 <br><br>
- 
+</div>
 
 
 <script>
