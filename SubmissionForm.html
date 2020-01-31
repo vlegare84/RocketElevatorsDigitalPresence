@@ -3,90 +3,63 @@
 		<style> 
 			
 				.customSelect {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					text-align: center;
+					position: static;
 				}
-				#DivApp {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
-					background-color:white;
+				#DivApp {	
 					display: none;
 					text-align: center;
+					position: auto;
 				}
 				#DivFloor {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					background-color: white;
 					display: none;
 					text-align: center;
+					position: auto;
 				}
 				#DivBase {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					background-color: white;
 					display: none;
 					text-align: center;
 				}
 				#DivBus {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					background-color: white;
 					display: none;
 					text-align: center;
 				}
 				#DivPark {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					background-color: white;
 					display: none;
 					justify-content: center;
 					text-align: center;
 				}
 				#DivCage {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					background-color: white;
 					display: none;
 					text-align: center;
 				}
 				#DivCom {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					background-color: white;
 					display: none;
 					text-align: center;
 				}
 				#DivPeople {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					background-color: white;
 					display: none;
 					text-align: center;
 				}
 				#DivHours {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					background-color: white;
 					display: none;
 					text-align: center;
 				}
 				#DivElev {
-					padding-left: 150px;
-					width: 500px;
-					height: 60px;
 					background-color: white;
 					display: none;
+					text-align: center;
+				}
+				#ChoiceModel {
+					position: auto;
 					text-align: center;
 				}
 				
@@ -334,16 +307,16 @@ How many occupants per floor<br>
 </div>
 
 <div id="DivHours">
-Enter the number of hours of activity of the building<br>
+How many open hours a day<br>
 
  <input id="OpenHours"    type="number" name=""  value=""  input="Call()"  onkeyup="Call()">   
 </div>
 
 <div id="DivElev">
-<br>
-
-The number of elevators you need: <input id="ResultElevator"    type="number" name="" value=""  disabled>   
+The number of elevators you need:<br> 
+	<input id="ResultElevator"    type="number" name="" value=""  disabled>   
 </div>
+<div id="ChoiceModel">
 <br>
   <p><strong>Now, you will need to choose between one of our three models :</strong></p>
   <input id =PriceUnitStandard type="radio" name="services" value="standard"  onchange="Price()" > Standard<br>
@@ -356,6 +329,7 @@ The number of elevators you need: <input id="ResultElevator"    type="number" na
 
 
  <br>   
+</div>
  <p id="demo2"></p>
 
  
