@@ -1,9 +1,9 @@
 <?php
-/**
- * @version		v1.0.0
- * @author		Dorin Grigoras [www.stepofweb.com]
- * @date		Thursday, May 21, 2015
-**/	date_default_timezone_set('Etc/UTC');
+
+ /** @version		v1.0.0 **/
+ /** @author		Dorin Grigoras [www.stepofweb.com] **/
+ /** @date		Thursday, May 21, 2015 **/
+ 	date_default_timezone_set('Etc/UTC');
 	@ini_set('display_errors', 0);
 	@ini_set('track_errors', 0);
 
@@ -270,12 +270,12 @@
 
 
 
-/** ******************************** **
- *	@REDIRECT
-		#alert_success 		= email sent
+/** ******************************** ** */
+ /**	@REDIRECT */
+	/** 	#alert_success 		= email sent */
 		#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
 		#alert_mandatory	= email not sent - required fields empty
- ** ******************************** **/
+ ******************************* **/
 	function _redirect($hash) {
 		
 		$HTTP_REFERER = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
@@ -288,9 +288,9 @@
 	}
 
 
-/** ********************************** 
- @CHECK EMAIL
-/** ******************************* **/
+/** ********************************** **/
+/**  @CHECK EMAIL
+** ******************************* **/
 	function ckmail($email) {
 		$email = trim(strtolower($email));
 		if(preg_match('/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/',trim($email))){
@@ -298,9 +298,9 @@
 		} else { return false; }
 	}
 
- /** ********************************** 
- @VISITOR ip
-/** ******************************* **/
+ /** ********************************** **/
+ /** @VISITOR ip
+** ******************************* **/
 	function ip() {
 		if     (getenv('HTTP_CLIENT_IP'))       { $ip = getenv('HTTP_CLIENT_IP');       } 
 		elseif (getenv('HTTP_X_FORWARDED_FOR')) { $ip = getenv('HTTP_X_FORWARDED_FOR'); } 

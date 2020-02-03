@@ -63,6 +63,18 @@
 					text-align: center;
 					display: none;
 				}
+				#TotalCost {
+					text-align: center;
+				}
+				#InstallationCost {
+					text-align: center;
+				}
+				#PriceUnit {
+					text-align: center;
+				}
+				#mySelect {
+					height: auto;
+				}
 				
 				
 				</style>
@@ -70,6 +82,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Rocket Elevators - Submission Form </title>
+		<link rel="icon" type="image/PNG" href="assets/images/R2fav.png">
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
@@ -93,7 +106,7 @@
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
 	<!--
@@ -101,7 +114,6 @@
 		
 		smoothscroll 			= create a browser smooth scroll
 		enable-animation		= enable WOW animations
-
 		bg-grey					= grey background
 		grain-grey				= grey grain background
 		grain-blue				= blue grain background
@@ -121,11 +133,9 @@
 
 			<!-- 
 				AVAILABLE HEADER CLASSES
-
 				Default nav height: 96px
 				.header-md 		= 70px nav height
 				.header-sm 		= 60px nav height
-
 				.b-0 		= remove bottom border (only with transparent use)
 				.transparent	= transparent header
 				.translucent	= translucent header
@@ -140,9 +150,7 @@
 				shadow-after-2 	= shadow 2 header bottom
 				shadow-before-3 = shadow 3 header top
 				shadow-after-3 	= shadow 3 header bottom
-
 				.clearfix		= required for mobile menu, do not remove!
-
 				Example Usage:  class="clearfix sticky header-sm transparent b-0"
 			-->
 			<body>
@@ -236,8 +244,8 @@
 <p id="Text">  <strong>Select the type of service</strong> </p> 
  
 
-<select id="mySelect" onchange="Choice()">
-    <option> </option>
+<select id="mySelect" onchange="Choice()" >
+    <option selected disabled hidden style='diplay: none' value="" ></option>
     <option>Residential</option>
     <option>Commercial</option>
     <option>Corporate</option>
@@ -423,7 +431,7 @@ The number of elevators you need:<br>
 			    var Cages = document.getElementById("Cages").value || 0;
 			
 			if (Parking != 0  && Basement != 0   && Floor  != 0  &&  Business != 0      )
-			 {document.getElementById("ResulElevator").value = Cages;}
+			 {document.getElementById("ResultElevator").value = Cages;}
 	        else {
 				document.getElementById("ResultElevator").value = 0;
 			    }
@@ -505,26 +513,26 @@ The number of elevators you need:<br>
 	   
 		 
 		 
-		 document.getElementById("PriceUnit").value="7565.00";
+		 document.getElementById("PriceUnit").value="7565.00" + "$";
 		 PriceInstallElevators =  7565*0.10*NumberCorporateElevators;
-		 PriceInstallElevators =  PriceInstallElevators.toFixed(2);
+		 PriceInstallElevators =  PriceInstallElevators.toFixed(2) + "$";
 		
 		 
 		 TotalCost = 7565*1.1*NumberCorporateElevators;
-		 TotalCost = TotalCost.toFixed(2);
+		 TotalCost = TotalCost.toFixed(2) + "$";
 										 
 		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
 		document.getElementById("TotalCost").value = TotalCost;
 							} 
 		 
 		 if  (document.getElementById("PriceUnitPremium").checked)	{ 		               
-		 document.getElementById("PriceUnit").value="12345.00"; 
+		 document.getElementById("PriceUnit").value="12345.00" + "$"; 
 		 PriceInstallElevators =  12345*0.13*NumberCorporateElevators;
-		 PriceInstallElevators =  PriceInstallElevators.toFixed(2);
+		 PriceInstallElevators =  PriceInstallElevators.toFixed(2) + "$";
 		 
 		 
 		 TotalCost = 7565*1.13*NumberCorporateElevators;
-		 TotalCost = TotalCost.toFixed(2);
+		 TotalCost = TotalCost.toFixed(2) + "$";
 									   
 		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
 		 document.getElementById("TotalCost").value = TotalCost;
@@ -532,13 +540,13 @@ The number of elevators you need:<br>
 				
 		 if  (document.getElementById("PriceUnitExcelium").checked)	{ 	
 		 
-		 document.getElementById("PriceUnit").value="15400.00"; 
+		 document.getElementById("PriceUnit").value="15400.00" + "$"; 
 		 PriceInstallElevators =  15400*0.16*NumberCorporateElevators;
-		 PriceInstallElevators =  PriceInstallElevators.toFixed(2);
+		 PriceInstallElevators =  PriceInstallElevators.toFixed(2) + "$";
 		
 		 
 		 TotalCost = 7565*1.16*NumberCorporateElevators;
-		 TotalCost = TotalCost.toFixed(2);
+		 TotalCost = TotalCost.toFixed(2) + "$";
 										 
 		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
 		document.getElementById("TotalCost").value = TotalCost;
@@ -808,7 +816,7 @@ function RemoveElementDiv11() {
 			<!-- BUTTON CALLOUT -->
 			<a href="Index.html#contact" class="btn btn-xlg btn-blue fs-20 fullwidth m-0 rad-0 p-40">
 				<span class="font-lato fs-30">
-					Did Rocket Elevators convinced you? 
+					Need help?
 					<strong>Contact us &raquo;</strong>
 				</span>
 			</a>
@@ -819,7 +827,6 @@ function RemoveElementDiv11() {
 			<!- Services ->
 			<section id="services">
 				<div class="container">
-
 					<div class="row">
 						<div class="col-sm-4">
 							<a class="image-hover lightbox" href="https://vimeo.com/ondemand/buildingwithawareness/108669033" data-plugin-options='{"type":"iframe"}'>
@@ -828,7 +835,6 @@ function RemoveElementDiv11() {
 								</span>
 								<img class="img-fluid" src="demo_files/images/thematics/rocket/AdobeStock_122227340_600_300.jpg" alt="img" />
 							</a>
-
 							<h3 class="mt-10">Winning Awards and Projects</h3>
 							<!-
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
@@ -836,7 +842,6 @@ function RemoveElementDiv11() {
 							<br />
 							<a href="#work" class="btn btn-default">SHOW PORTFOLIO</a>
 						</div>
-
 						<div class="col-sm-4">
 							<a class="image-hover lightbox" href="https://www.youtube.com/watch?v=ZhCyoDlltbo" data-plugin-options='{"type":"iframe"}'>
 								<span class="image-hover-icon image-hover-dark"><!- image-hover-light | image-hover-dark ->
@@ -852,7 +857,6 @@ function RemoveElementDiv11() {
 							
 							<a href="index-onepage-construction_Residential.html" class="btn btn-default">SHOW RESIDENTIAL SERVICES</a>
 						</div>
-
 						<div class="col-sm-4">
 							<img class="img-fluid" src="demo_files/images/thematics/rocket/AdobeStock_66781279.jpeg" alt="img" />
 							<h3 class="mt-10">Corporate Services</h3>
@@ -862,9 +866,7 @@ function RemoveElementDiv11() {
 						    ->
 							<a href="#" class="btn btn-default">SHOW CORPORATE SERVICES</a>
 						</div>
-
 					</div>
-
 				</div>
 			</section>
 			<!- /Services ->
@@ -876,16 +878,13 @@ function RemoveElementDiv11() {
 			<!- Parallax ->
 			<section class="parallax parallax-1" style="background-image: url('demo_files/images/1200x800/34-min.jpg');">
 				<div class="overlay dark-5"><!- dark overlay [1 to 9 opacity] -></div>
-
 				<div class="container">
-
 					<div class="text-center">
 						<h2 class="fs-40 fw-300"> Rocket Elevators Since 1976</h2>
 						<a class="btn btn-default btn-lg" href="#">GET A SUBMISSION <i class="fa fa-angle-right"></i></a> 
 						&nbsp; OR &nbsp; 
 						<a class="btn btn-default btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
 					</div>
-
 				</div>
 			</section>
 			<!- /Parallax ->
@@ -992,8 +991,6 @@ function RemoveElementDiv11() {
 
 		<script src="assets/js/scripts.js"></script>
 		
-		<!-- STYLESWITCHER - REMOVE -->
-		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
 
 		<!-- REVOLUTION SLIDER -->
 		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -1032,5 +1029,6 @@ function RemoveElementDiv11() {
 			});
 
 		</script>
+		<script>console.log("Salut les coachs!!")</script>
 	</body>
 </html>
