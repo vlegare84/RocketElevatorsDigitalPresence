@@ -24,7 +24,23 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
-
+		<script type="text/javascript" src="assets/plugins/egg.min.js"></script>
+		<script type="text/javascript">
+		  var egg = new Egg();
+		  egg.addCode("up,up,down,down,left,right,left,right,b,a", function() {
+			jQuery('#egggif').fadeIn(500, function() {
+			  window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
+			});
+		  }, "konami-code");
+		  egg.addHook(function(){
+			console.log("Hook called for: " + this.activeEgg.keys);
+			console.log(this.activeEgg.metadata);
+		  });
+		  egg.listen();
+		</script>
+		  <style type="text/css">
+			#egggif {position: absolute; top: 33%; left: 25%; display: none; }
+		  </style>
 
 
 	</head>
@@ -52,7 +68,7 @@
 	-->
 	<body>
 		<body>
-
+			<img id="egggif" src="assets/images/egg.gif" />
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
 				<!-- TOP NAV -->
