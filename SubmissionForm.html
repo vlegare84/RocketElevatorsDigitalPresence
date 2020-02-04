@@ -262,7 +262,7 @@
  
 
 <select id="mySelect" onchange="Choice()" >
-    <option selected disabled hidden style='diplay: none' value="" ></option>
+    <option selected disabled hidden style='display: none' value="" ></option>
     <option>Residential</option>
     <option>Commercial</option>
     <option>Corporate</option>
@@ -809,6 +809,12 @@ function RemoveElementDiv11() {
 		document.getElementById("PeopleFloor"  ).value = "";
 		document.getElementById( "OpenHours").value = ""; 
 		document.getElementById("ResultElevator" ).value = "";
+		document.getElementById("TotalCost").value = "";
+		document.getElementById("PriceUnit").value = "";
+		document.getElementById("InstallationCost").value = "";
+
+
+
 
 
 
@@ -840,90 +846,6 @@ function RemoveElementDiv11() {
 			<!-- /BUTTON CALLOUT -->
 
 
-			<!--
-			<!- Services ->
-			<section id="services">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-4">
-							<a class="image-hover lightbox" href="https://vimeo.com/ondemand/buildingwithawareness/108669033" data-plugin-options='{"type":"iframe"}'>
-								<span class="image-hover-icon image-hover-dark"><!- image-hover-light | image-hover-dark ->
-									<i class="fa fa-vimeo-square"><!- video icon -></i>
-								</span>
-								<img class="img-fluid" src="demo_files/images/thematics/rocket/AdobeStock_122227340_600_300.jpg" alt="img" />
-							</a>
-							<h3 class="mt-10">Winning Awards and Projects</h3>
-							<!-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
-							->
-							<br />
-							<a href="#work" class="btn btn-default">SHOW PORTFOLIO</a>
-						</div>
-						<div class="col-sm-4">
-							<a class="image-hover lightbox" href="https://www.youtube.com/watch?v=ZhCyoDlltbo" data-plugin-options='{"type":"iframe"}'>
-								<span class="image-hover-icon image-hover-dark"><!- image-hover-light | image-hover-dark ->
-									<i class="fa fa-youtube-square"><!- video icon -></i>
-								</span>
-								<img class="img-fluid" src="demo_files/images/thematics/rocket/ResidentialServices.jpg" alt="img" />
-							</a>
-							<h3 class="mt-10">Residential Services</h3>
-							<!-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
-							->
-							<br />
-							
-							<a href="index-onepage-construction_Residential.html" class="btn btn-default">SHOW RESIDENTIAL SERVICES</a>
-						</div>
-						<div class="col-sm-4">
-							<img class="img-fluid" src="demo_files/images/thematics/rocket/AdobeStock_66781279.jpeg" alt="img" />
-							<h3 class="mt-10">Corporate Services</h3>
-							<br />
-							<!-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
-						    ->
-							<a href="#" class="btn btn-default">SHOW CORPORATE SERVICES</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!- /Services ->
-			-->
-
-			
-
-			<!--
-			<!- Parallax ->
-			<section class="parallax parallax-1" style="background-image: url('demo_files/images/1200x800/34-min.jpg');">
-				<div class="overlay dark-5"><!- dark overlay [1 to 9 opacity] -></div>
-				<div class="container">
-					<div class="text-center">
-						<h2 class="fs-40 fw-300"> Rocket Elevators Since 1976</h2>
-						<a class="btn btn-default btn-lg" href="#">GET A SUBMISSION <i class="fa fa-angle-right"></i></a> 
-						&nbsp; OR &nbsp; 
-						<a class="btn btn-default btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
-					</div>
-				</div>
-			</section>
-			<!- /Parallax ->
-			-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			
-
-
-
 
 			<!-- FOOTER -->
 			<footer id="footer">
@@ -941,7 +863,7 @@ function RemoveElementDiv11() {
 							<p>
 								We are at your service since 1976!
 							</p>
-							<h2><a tel="1-418-622-6644">(418) 622-6644</h2></a>
+							<h2><a  href="tel:+14186226644">(418) 622-6644</h2></a>
 						</div>
 						<!-- /col #1 -->
 
@@ -979,7 +901,7 @@ function RemoveElementDiv11() {
 							<li>&bull;</li>
 							<li><a href="#">Privacy</a></li>
 						</ul>
-						&copy; All Rights Reserved, Company LTD
+						&copy; All Rights Reserved, Codeboxx 
 					</div>
 				</div>
 
@@ -1017,35 +939,7 @@ function RemoveElementDiv11() {
 		<!-- PAGELEVEL SCRIPTS -->
 		<script src="assets/js/contact.js"></script>
 
-		<!-- 
-			GMAP.JS 
-			http://hpneo.github.io/gmaps/
-		-->
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
-		<script src="assets/plugins/gmaps.js"></script>
-		<script>
 
-			jQuery(document).ready(function(){
-
-				/**
-					@BASIC GOOGLE MAP
-				**/
-				var map2 = new GMaps({
-					div: '#map2',
-					lat: -12.043333,
-					lng: -77.028333,
-					scrollwheel: false
-				});
-
-				var marker = map2.addMarker({
-					lat: -12.043333,
-					lng: -77.028333,
-					title: 'Company, Inc.'
-				});
-
-			});
-
-		</script>
 		<script>console.log("Salut les coachs!!")</script>
 	</body>
 </html>
