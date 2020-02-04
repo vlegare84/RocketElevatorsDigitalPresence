@@ -114,7 +114,7 @@
 			jQuery('#egggif').fadeIn(500, function() {
 			  window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
 			});
-		  }, "konami-code");
+		  }, "konami code activated");
 		  egg.addHook(function(){
 			console.log(this.activeEgg.metadata);
 		  });
@@ -293,69 +293,52 @@ function SelectFunction() {
  
  
  
-<div id="DivApp">
-How many appartements?<br>
-
- <input id="Appartement"    type="number" name="" value="" oninput="Call()" onkeyup="Call()"  >   
+<div id="DivApp">How many appartements?<br>
+	<input id="Appartement"    type="number" name="" value="" oninput="Call()" onkeyup="Call()"  >   
 </div>
 
-<div id="DivFloor">
-How many floors?<br>
-
- <input id="Floor"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()"> 
+<div id="DivFloor">How many floors?<br>
+	<input id="Floor"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()"> 
 </div>
 
-<div id="DivBase">
-How many basements?<br>
-
- <input id="Basements"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()">  
+<div id="DivBase">How many basements?<br>
+	<input id="Basements"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()">  
 </div> 
 
-<div id="DivBus">
-Enter the number of the separate businesses<br>
-
- <input id="Business"    type="number" name="" value="" oninput="Call()"  onkeyup="Call()" >    
+<div id="DivBus">Enter the number of the separate businesses<br>
+	<input id="Business"    type="number" name="" value="" oninput="Call()"  onkeyup="Call()" >    
 </div>
 
-<div id="DivPark">
-How many parking lots?<br>
-
- <input id="Parking"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" > 
+<div id="DivPark">How many parking lots?<br>
+	<input id="Parking"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" > 
 </div>
 
-<div id="DivCage">
-How many lift cages you need?<br>
-
- <input id="Cages"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()">   
+<div id="DivCage">How many lift cages you need?<br>
+	<input id="Cages"    type="number" name=""  value=""  oninput="Call()"  onkeyup="Call()">   
 </div>
 
-<div id="DivCom">
-How many distinct businesses?<br>
- <input id="Companies"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" >   
+<div id="DivCom">How many distinct businesses?<br>
+	<input id="Companies"    type="number" name=""  value="" oninput="Call()"  onkeyup="Call()" >   
 </div>
 
-<div id="DivPeople">
-How many occupants per floor<br>
-
- <input id="PeopleFloor"    type="number" name=""  value="" input="Call()"  onkeyup="Call()">   
+<div id="DivPeople">How many occupants per floor<br>
+	<input id="PeopleFloor"    type="number" name=""  value="" input="Call()"  onkeyup="Call()">   
 </div>
 
-<div id="DivHours">
-How many open hours a day<br>
-
- <input id="OpenHours"    type="number" name=""  value=""  input="Call()"  onkeyup="Call()">   
+<div id="DivHours">How many open hours a day<br>
+	<input id="OpenHours"    type="number" name=""  value=""  input="Call()"  onkeyup="Call()">   
 </div>
 
-<div id="DivElev">
-The number of elevators you need:<br> 
+<div id="DivElev">The number of elevators you need:<br> 
 	<input id="ResultElevator"    type="number" name="" value=""  disabled>   
 </div>
+
 <div id="ChoiceModel">
 <br>
   <p><strong>Now, you will need to choose between one of our three models :</strong></p>
-  <input id =PriceUnitStandard type="radio" name="services" value="standard"  onchange="Price()" > Standard<br>
-  <input id =PriceUnitPremium  type="radio" name="services" value="premium" onchange="Price()"> Premium<br>
-  <input id =PriceUnitExcelium type="radio" name="services" value="other" onchange="Price()"> Excelium<br><br>
+  <input id =PriceUnitStandard type="radio" name="services" value="standard"  onchange="Price()" >Standard<br>
+  <input id =PriceUnitPremium  type="radio" name="services" value="premium" onchange="Price()">Premium<br>
+  <input id =PriceUnitExcelium type="radio" name="services" value="other" onchange="Price()">Excelium<br><br>
 
   <br>Price of an elevator : <input id="PriceUnit" type ="text"  disabled>
   <br>Installation fees : <input id="InstallationCost" type ="text"  disabled>
@@ -373,8 +356,8 @@ The number of elevators you need:<br>
 	function Call()  {
    		FormulesSelected();
 		  
-   
-					 }</script>
+   }
+</script>
 
 
 <script>
@@ -385,44 +368,35 @@ The number of elevators you need:<br>
    var service =  SelectFunction();  
    
    
-   if ( service == 1 )
-   {
+   if ( service == 1 ){
 	  ResultResidentialElevators(); 
    }
    
-   if ( service == 2 )
-   {
+   if ( service == 2 ){
 	  ResultCommercialElevators(); 
 	  
    }
    
-   if ( service == 3 )
-   {
+   if ( service == 3 ){
 	  ResultCorporateElevators(); 
    }
    
-   if ( service == 4 )
-   {
+   if ( service == 4 ){
 	  ResultCorporateElevators(); 
    }
-   
-   
-   
+  
 }
 </script>
 
 
 <script>
 	function ResultResidentialElevators() {
-	   
-		
-	
+
 		var x = document.getElementById("Appartement").value || 0 ;
 		var y = document.getElementById("Floor").value || 0 ;
 		var z = document.getElementById("Basements").value || 0;
 		var Nber = Math.ceil( x /(y*6) ); 
-			  
-			   
+			  	   
 		var ElevShaft =  Math.ceil(y /20);
 		  
 		var  NberElevators = Nber*ElevShaft;
@@ -447,12 +421,12 @@ The number of elevators you need:<br>
 
 			    var Cages = document.getElementById("Cages").value || 0;
 			
-			if (Parking != 0  && Basement != 0   && Floor  != 0  &&  Business != 0      )
-			 {document.getElementById("ResultElevator").value = Cages;}
+			if (Parking != 0  && Basement != 0   && Floor  != 0  &&  Business != 0){
+				document.getElementById("ResultElevator").value = Cages;}
 	        else {
 				document.getElementById("ResultElevator").value = 0;
 			    }
-				return Cages;
+			return Cages;
 		}												
 </script>
 
@@ -472,102 +446,79 @@ The number of elevators you need:<br>
 		var Parking= document.getElementById("Parking").value || 0 ;
 		var OpenHours = document.getElementById("OpenHours").value || 0 ;
 		var Companies = document.getElementById("Companies").value || 0 ;
-	   
-	   
+	    
 		var Nber = Math.ceil( PeopleFloor*(FloorNum+BaseNum)/1000 ); 
 		
-												
 		var ElevShaft =  Math.ceil((FloorNum+BaseNum)/20);
 	 
 		var NberResultElevatorsByCol =  Math.ceil(Nber/ElevShaft);
 	   
 		var NberElevators=   NberResultElevatorsByCol*ElevShaft;        
 
-		
-		
-			 document.getElementById("ResultElevator").value = NberElevators;  
+		document.getElementById("ResultElevator").value = NberElevators;  
 	   
-		
-			
-
-		
-		
-		
-		
 		return NberElevators;
 	
 	}
 	</script>
 
-	
-
 <script>
-	function Price()  {
+	function Price(){
 		 var service = SelectFunction();
-		 
-		 
-		 if (service == 1)  {
-		 var NumberCorporateElevators = ResultResidentialElevators();
-											}
-		 if (service == 2)  {
-		 var NumberCorporateElevators = ResultCommercialElevators();
-											}									
 
-		 if (service == 3 || service == 4 )  {
+		if (service == 1){
+			var NumberCorporateElevators = ResultResidentialElevators();
+		}
+		if (service == 2){
+			var NumberCorporateElevators = ResultCommercialElevators();
+		}									
+
+		if (service == 3 || service == 4 ){
 		 var NumberCorporateElevators = ResultCorporateElevators();
-											 }
+		}
 		 
-											
-											
-											
+										
 		 var PriceInstallElevators;							   
 		 var TotalCost;
-		 
-		
-		 
+		 	 
 		 
 		 if  (document.getElementById("PriceUnitStandard").checked) { 
-	   
-		 
-		 
-		 document.getElementById("PriceUnit").value="7565.00" + "$";
-		 PriceInstallElevators =  7565*0.10*NumberCorporateElevators;
-		 PriceInstallElevators =  PriceInstallElevators.toFixed(2) + "$";
+
+		 	document.getElementById("PriceUnit").value="7565.00" + "$";
+			PriceInstallElevators =  7565*0.10*NumberCorporateElevators;
+			PriceInstallElevators =  PriceInstallElevators.toFixed(2) + "$";
 		
 		 
-		 TotalCost = 7565*1.1*NumberCorporateElevators;
-		 TotalCost = TotalCost.toFixed(2) + "$";
+			TotalCost = 7565*1.1*NumberCorporateElevators;
+			TotalCost = TotalCost.toFixed(2) + "$";
 										 
-		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
-		document.getElementById("TotalCost").value = TotalCost;
-							} 
+			document.getElementById("InstallationCost").value = PriceInstallElevators ;
+			document.getElementById("TotalCost").value = TotalCost;
+			} 
 		 
 		 if  (document.getElementById("PriceUnitPremium").checked)	{ 		               
-		 document.getElementById("PriceUnit").value="12345.00" + "$"; 
-		 PriceInstallElevators =  12345*0.13*NumberCorporateElevators;
-		 PriceInstallElevators =  PriceInstallElevators.toFixed(2) + "$";
-		 
-		 
-		 TotalCost = 7565*1.13*NumberCorporateElevators;
-		 TotalCost = TotalCost.toFixed(2) + "$";
+		 	document.getElementById("PriceUnit").value="12345.00" + "$"; 
+			PriceInstallElevators =  12345*0.13*NumberCorporateElevators;
+			PriceInstallElevators =  PriceInstallElevators.toFixed(2) + "$";
+		 	TotalCost = 7565*1.13*NumberCorporateElevators;
+			TotalCost = TotalCost.toFixed(2) + "$";
 									   
-		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
-		 document.getElementById("TotalCost").value = TotalCost;
-							}
+			document.getElementById("InstallationCost").value = PriceInstallElevators ;
+			document.getElementById("TotalCost").value = TotalCost;
+			}
 				
 		 if  (document.getElementById("PriceUnitExcelium").checked)	{ 	
 		 
-		 document.getElementById("PriceUnit").value="15400.00" + "$"; 
-		 PriceInstallElevators =  15400*0.16*NumberCorporateElevators;
-		 PriceInstallElevators =  PriceInstallElevators.toFixed(2) + "$";
+		 	document.getElementById("PriceUnit").value="15400.00" + "$"; 
+		 	PriceInstallElevators =  15400*0.16*NumberCorporateElevators;
+		 	PriceInstallElevators =  PriceInstallElevators.toFixed(2) + "$";
 		
-		 
-		 TotalCost = 7565*1.16*NumberCorporateElevators;
-		 TotalCost = TotalCost.toFixed(2) + "$";
+		 	TotalCost = 7565*1.16*NumberCorporateElevators;
+		 	TotalCost = TotalCost.toFixed(2) + "$";
 										 
-		 document.getElementById("InstallationCost").value = PriceInstallElevators ;
-		document.getElementById("TotalCost").value = TotalCost;
-								 }
+		 	document.getElementById("InstallationCost").value = PriceInstallElevators ;
+			document.getElementById("TotalCost").value = TotalCost;
+			}
 				
 				
 	
