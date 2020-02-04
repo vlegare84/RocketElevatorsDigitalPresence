@@ -75,6 +75,11 @@
 				#mySelect {
 					height: auto;
 				}
+				#SubmitB {
+					text-align: center;
+					position: auto;
+					display: none;
+				}
 				
 				
 				</style>
@@ -292,7 +297,7 @@ function SelectFunction() {
  
  
  
- 
+ <form id="Formulaire">
 <div id="DivApp">How many appartements?<br>
 	<input id="Appartement"    type="number" name="" value="" oninput="Call()" onkeyup="Call()"  >   
 </div>
@@ -346,6 +351,10 @@ function SelectFunction() {
 
 
  <br>   
+</div>
+<div id="SubmitB">
+	<br>
+	<input id="SubBut" type="submit" disabled>
 </div>
  
 
@@ -528,7 +537,7 @@ function SelectFunction() {
 	}
 	</script>
 	
-	
+ </form>
 
 <script>
 function AddElementDiv1() {
@@ -592,6 +601,11 @@ function AddElementDiv9() {
 <script>
 	function AddElementDiv11(){
 		document.getElementById("ChoiceModel").style.display = "block";
+	}
+</script>
+<script>
+	function AddElementDiv12(){
+		document.getElementById("SubmitB").style.display = "block";
 	}
 </script>
 
@@ -662,6 +676,11 @@ function RemoveElementDiv11() {
 	document.getElementById("ChoiceModel").style.display = "none";
 }
 </script>
+<script>
+function RemoveElementDiv12(){
+	document.getElementById("SubmitB").style.display = "none";
+}
+</script>
 
 
 
@@ -683,7 +702,8 @@ function RemoveElementDiv11() {
         	RemoveElementDiv8();
         	RemoveElementDiv9(); 
 			RemoveElementDiv10(); 	
-			RemoveElementDiv11();						
+			RemoveElementDiv11();	
+			RemoveElementDiv12();					
 		}  
     
     	if	(SelectFunction() === 1)	{
@@ -694,6 +714,7 @@ function RemoveElementDiv11() {
         	AddElementDiv3();
 			AddElementDiv10();
 			AddElementDiv11();
+			AddElementDiv12();
         	RemoveElementDiv4();
         	RemoveElementDiv5();
         	RemoveElementDiv6();
@@ -712,6 +733,7 @@ function RemoveElementDiv11() {
         	AddElementDiv6();
 			AddElementDiv10();
 			AddElementDiv11();
+			AddElementDiv12();
     		RemoveElementDiv1();
     		RemoveElementDiv7();
         	RemoveElementDiv8();
@@ -728,6 +750,7 @@ function RemoveElementDiv11() {
         	AddElementDiv8();
 			AddElementDiv10();
 			AddElementDiv11();
+			AddElementDiv12();
         	RemoveElementDiv1();
         	RemoveElementDiv4();
         	RemoveElementDiv6();
@@ -745,6 +768,7 @@ function RemoveElementDiv11() {
         	AddElementDiv9();
 			AddElementDiv10();
 			AddElementDiv11();
+			AddElementDiv12();
         	RemoveElementDiv1();
         	RemoveElementDiv6();
         	RemoveElementDiv7();
@@ -870,7 +894,9 @@ function RemoveElementDiv11() {
 
 		<!-- PAGELEVEL SCRIPTS -->
 		<script src="assets/js/contact.js"></script>
+<script>
 
+</script>
 
 		<script>console.log("Salut les coachs!!")</script>
 	</body>
