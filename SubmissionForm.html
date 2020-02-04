@@ -326,7 +326,7 @@ function SelectFunction() {
 </div>
 
 <div id="DivHours">How many open hours a day<br>
-	<input id="OpenHours"    type="number" name=""  value=""  input="Call()"  onkeyup="Call()">   
+	<input id="OpenHours"    type="number" name=""  value="" max="24"  input="Call()"  onkeyup="Call()">   
 </div>
 
 <div id="DivElev">The number of elevators you need:<br> 
@@ -446,7 +446,13 @@ function SelectFunction() {
 		var Parking= document.getElementById("Parking").value || 0 ;
 		var OpenHours = document.getElementById("OpenHours").value || 0 ;
 		var Companies = document.getElementById("Companies").value || 0 ;
-	    
+		
+		if (OpenHours >= 25 ){
+			document.getElementById("OpenHours").value = 24;
+		};
+		if (OpenHours < 0){
+			document.getElementById("OpenHours").value = 1;
+		};
 		var Nber = Math.ceil( PeopleFloor*(FloorNum+BaseNum)/1000 ); 
 		
 		var ElevShaft =  Math.ceil((FloorNum+BaseNum)/20);
