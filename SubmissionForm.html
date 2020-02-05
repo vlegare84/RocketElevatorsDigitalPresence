@@ -91,7 +91,7 @@
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
 		<!-- WEB FONTS : use %7C instead of | (pipe) -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
 
 		<!-- CORE CSS -->
 		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -393,34 +393,63 @@ function SelectFunction() {
 <script>
 	function ResultResidentialElevators() {
 
-		var Appt = document.getElementById("Appartement").value || 0 ;
-		var FL = document.getElementById("Floor").value || 0 ;
-		var BS = document.getElementById("Basements").value || 0;
-		var Nber = Math.ceil( Appt /(FL*6) ); 
+		var Appt = document.getElementById("Appartement").value;
+			if (Appt < 0){
+				document.getElementById("Appartement").value = 1;
+			};
+		var FL = document.getElementById("Floor").value;
+			if (FL < 0){
+				document.getElementById("Floor").value = 1;
+			};
+		var BS = document.getElementById("Basements").value;
+			if (BS < 0){
+				document.getElementById("Basements").value = 1;
+			};
+		var Nber = Math.ceil( (Appt /FL) ); 
+		var Nber2 = Math.ceil(Nber/6);
 			  	   
 		var ElevShaft =  Math.ceil(FL /20);
-		  
-		var  NberElevators = Nber*ElevShaft;
-		if (Appt != 0  && FL != 0   && BS  != 0  )
-		{document.getElementById("ResultElevator").value= NberElevators;}
-		else {
-				document.getElementById("ResultElevator").value = 0;
-			    }
-		
+		var  NberElevators = Nber2*ElevShaft;
+
+		if (Appt != 0 && FL != 0 && BS != 0){
+			document.getElementById("ResultElevator").value = NberElevators;
+		}else {
+			document.getElementById("ResultElevator").value = 0;
+		}
 		return NberElevators;
+		};	
+		
+		
+
 	
-	}
+	
 	</script>
 
 
 <script>
 	function ResultCommercialElevators() {
-		       var Parking =   document.getElementById ("Parking").value || 0 ;
-			   var  Basement =   document.getElementById ("Basements").value || 0 ;
-			   var  Floor =   document.getElementById (	"Floor").value 	|| 0 ;
-			   var  Business =   document.getElementById ("Business").value ||  0 ;
+			var Parking =   document.getElementById ("Parking").value;
+				if (Parking < 0 ) {
+					document.getElementById("Parking").value = 1;
+				};
+			var  Basement =   document.getElementById ("Basements").value;
+				if (Basement < 0){
+					document.getElementById("Basements").value =1;
+				};
+			
+			var  Floor =   document.getElementById (	"Floor").value ;
+				if (Floor < 0){
+					document.getElementById("Floor").value = 1;
+				};
+			var  Business =   document.getElementById ("Business").value ;
+				if(Business < 0){
+					document.getElementById("Business").value = 1;
+				};
 
-			    var Cages = document.getElementById("Cages").value || 0;
+			var Cages = document.getElementById("Cages").value;
+				if (Cages < 0){
+					document.getElementById("Cages").value = 1;
+				};	
 			
 			if (Parking != 0  && Basement != 0   && Floor  != 0  &&  Business != 0){
 				document.getElementById("ResultElevator").value = Cages;}
@@ -436,24 +465,43 @@ function SelectFunction() {
 	function ResultCorporateElevators() {
 	   service = SelectFunction();
 
-		var Floor =  document.getElementById("Floor").value  || 0 ;
-		var FloorNum = Number(document.getElementById("Floor").value || 0  );
+		var Floor =  document.getElementById("Floor").value;
+			if(Floor < 0){
+				document.getElementById("Floor").value = 1;
+			};
+		var FloorNum = Number(document.getElementById("Floor").value);
 		
 		var Basement =   document.getElementById("Basements").value;
-		var BaseNum = Number(document.getElementById("Basements").value || 0 );
+			if (Basement < 0){
+				document.getElementById("Basements").value = 1;
+			};
+		var BaseNum = Number(document.getElementById("Basements").value);
 
-		var PeopleFloor = document.getElementById("PeopleFloor").value || 0 ;
-		var Business = document.getElementById("Business").value || 0 ;
-		var Parking= document.getElementById("Parking").value || 0 ;
-		var OpenHours = document.getElementById("OpenHours").value || 0 ;
-		var Companies = document.getElementById("Companies").value || 0 ;
+		var PeopleFloor = document.getElementById("PeopleFloor").value;
+			if (PeopleFloor < 0){
+				document.getElementById("PeopleFloor").value = 1;
+			};
+		var Business = document.getElementById("Business").value;
+			if (Business < 0 ){
+				document.getElementById("Business").value = 1;
+			};
+		var Parking= document.getElementById("Parking").value;
+			if(Parking < 0){
+				document.getElementById("Parking").value = 1;
+			};
+		var OpenHours = document.getElementById("OpenHours").value;
+			if (OpenHours >= 25 ){
+				document.getElementById("OpenHours").value = 24;
+			};
+			if (OpenHours < 0){
+				document.getElementById("OpenHours").value = 1;
+			};
+		var Companies = document.getElementById("Companies").value;
+			if (Companies < 0){
+				document.getElementById("Companies").value = 1;
+			};
 		
-		if (OpenHours >= 25 ){
-			document.getElementById("OpenHours").value = 24;
-		};
-		if (OpenHours < 0){
-			document.getElementById("OpenHours").value = 1;
-		};
+
 		var Nber = Math.ceil( PeopleFloor*(FloorNum+BaseNum)/1000 ); 
 		
 		var ElevShaft =  Math.ceil((FloorNum+BaseNum)/20);
