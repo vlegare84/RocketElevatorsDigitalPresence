@@ -75,11 +75,6 @@
 				#mySelect {
 					height: auto;
 				}
-				#SubmitB {
-					text-align: center;
-					position: auto;
-					display: none;
-				}
 				
 				
 				</style>
@@ -352,10 +347,7 @@ function SelectFunction() {
 
  <br>   
 </div>
-<div id="SubmitB">
-	<br>
-	<input id="SubBut" type="submit" disabled>
-</div>
+
  
 
  
@@ -401,15 +393,15 @@ function SelectFunction() {
 <script>
 	function ResultResidentialElevators() {
 
-		var x = document.getElementById("Appartement").value || 0 ;
-		var y = document.getElementById("Floor").value || 0 ;
-		var z = document.getElementById("Basements").value || 0;
-		var Nber = Math.ceil( x /(y*6) ); 
+		var Appt = document.getElementById("Appartement").value || 0 ;
+		var FL = document.getElementById("Floor").value || 0 ;
+		var BS = document.getElementById("Basements").value || 0;
+		var Nber = Math.ceil( Appt /(FL*6) ); 
 			  	   
-		var ElevShaft =  Math.ceil(y /20);
+		var ElevShaft =  Math.ceil(FL /20);
 		  
 		var  NberElevators = Nber*ElevShaft;
-		if (x != 0  && y != 0   && z  != 0  )
+		if (Appt != 0  && FL != 0   && BS  != 0  )
 		{document.getElementById("ResultElevator").value= NberElevators;}
 		else {
 				document.getElementById("ResultElevator").value = 0;
@@ -467,7 +459,7 @@ function SelectFunction() {
 		var ElevShaft =  Math.ceil((FloorNum+BaseNum)/20);
 	 
 		var NberResultElevatorsByCol =  Math.ceil(Nber/ElevShaft);
-	   
+		
 		var NberElevators=   NberResultElevatorsByCol*ElevShaft;        
 
 		document.getElementById("ResultElevator").value = NberElevators;  
@@ -603,11 +595,7 @@ function AddElementDiv9() {
 		document.getElementById("ChoiceModel").style.display = "block";
 	}
 </script>
-<script>
-	function AddElementDiv12(){
-		document.getElementById("SubmitB").style.display = "block";
-	}
-</script>
+
 
 
 
@@ -676,11 +664,7 @@ function RemoveElementDiv11() {
 	document.getElementById("ChoiceModel").style.display = "none";
 }
 </script>
-<script>
-function RemoveElementDiv12(){
-	document.getElementById("SubmitB").style.display = "none";
-}
-</script>
+
 
 
 
@@ -703,7 +687,7 @@ function RemoveElementDiv12(){
         	RemoveElementDiv9(); 
 			RemoveElementDiv10(); 	
 			RemoveElementDiv11();	
-			RemoveElementDiv12();					
+								
 		}  
     
     	if	(SelectFunction() === 1)	{
@@ -714,7 +698,6 @@ function RemoveElementDiv12(){
         	AddElementDiv3();
 			AddElementDiv10();
 			AddElementDiv11();
-			AddElementDiv12();
         	RemoveElementDiv4();
         	RemoveElementDiv5();
         	RemoveElementDiv6();
@@ -733,7 +716,6 @@ function RemoveElementDiv12(){
         	AddElementDiv6();
 			AddElementDiv10();
 			AddElementDiv11();
-			AddElementDiv12();
     		RemoveElementDiv1();
     		RemoveElementDiv7();
         	RemoveElementDiv8();
@@ -750,7 +732,6 @@ function RemoveElementDiv12(){
         	AddElementDiv8();
 			AddElementDiv10();
 			AddElementDiv11();
-			AddElementDiv12();
         	RemoveElementDiv1();
         	RemoveElementDiv4();
         	RemoveElementDiv6();
@@ -768,7 +749,6 @@ function RemoveElementDiv12(){
         	AddElementDiv9();
 			AddElementDiv10();
 			AddElementDiv11();
-			AddElementDiv12();
         	RemoveElementDiv1();
         	RemoveElementDiv6();
         	RemoveElementDiv7();
@@ -790,6 +770,7 @@ function RemoveElementDiv12(){
 
 }
 </script>
+
 
 
 			<!-- BUTTON CALLOUT -->
