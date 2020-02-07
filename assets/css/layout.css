@@ -60,7 +60,7 @@ html, body {
 body {
 	color:#666;
 	background-color:#fff;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'Roboto',sans-serif;
 	-webkit-font-smoothing: antialiased;
 
 	font-size:16px; line-height:1.5;
@@ -466,6 +466,10 @@ section.dark h6.page-header {
 .font-raleway {
 	font-family:'Raleway',Arial,Helvetica,sans-serif !important;
 }
+.font-roboto {
+	font-family: 'Roboto', sans-serif;
+
+}
 
 
 
@@ -756,7 +760,7 @@ body.boxed #wrapper {
 	text-align:center;
 }
 #slidetop a.slidetop-toggle:after {
-	font-family:FontAwesome;
+	font-family:Roboto;
 	content: "\f067";
 	height:18px;
 	color:#fff;
@@ -4004,7 +4008,7 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 	background-color: rgba(0,0,0,0.7);
 }
 #toTop:before {
-	font-family: "fontawesome";
+	font-family: "Roboto";
 	content: "\f102";
 }
 
@@ -5207,7 +5211,7 @@ section.page-header * {
 .bs-prev:before {
 
 	content: "\f104";
-	font-family: 'FontAwesome';
+	font-family: 'Roboto';
 	display: block;
 	font-size:50px;
 	color: #fff;
@@ -6067,7 +6071,7 @@ section.dark .tab-post a {
 	}
 	ul.side-nav li.list-toggle:after {
 		content: "\f104";
-		font-family: FontAwesome;
+		font-family: Roboto;
 		position: absolute;
 		font-size: 15px;
 		right: 10px;
@@ -6967,7 +6971,7 @@ section#slider:not(.custom-form) .btn-default {
 		display:inline-block;
 		color: #fff;
 		background-color:rgba(0,0,0,0.7);
-		font-family:'Lato',Arial,Helvetica,sans-serif;
+		font-family:'Roboto',sans-serif;
 		font-weight:300;
 		padding: 6px 15px 8px 15px;
 		opacity: 1;
@@ -7017,7 +7021,7 @@ section#slider:not(.custom-form) .btn-default {
 		list-style: none;
 	}
 	.camera_caption {
-		font-family:'Lato',Arial,Helvetica,sans-serif;
+		font-family:'Roboto',sans-serif;
 		font-size:22px;
 		font-weight:300;
 	}
@@ -7050,7 +7054,7 @@ section#slider:not(.custom-form) .btn-default {
 	.ei-title h3 {
 		font-size: 60px;
 		line-height: 60px;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Roboto', sans-serif;
 		text-transform: uppercase;
 		font-weight:300;
 		color: #fff;
