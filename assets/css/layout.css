@@ -4008,7 +4008,7 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 	background-color: rgba(0,0,0,0.7);
 }
 #toTop:before {
-	font-family: "Roboto";
+	font-family: "fontawesome";
 	content: "\f102";
 }
 
